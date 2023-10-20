@@ -12,6 +12,9 @@ COPY vdbench_runner.sh /vdbench/vdbench_runner.sh
 # Delete installation files
 WORKDIR /root
 
+# Set the default shell to /bin/bash
+SHELL ["/bin/bash", "-c"]
+
 # Extract vdbench files
 RUN unzip /vdbench/vdbench50407.zip -d /vdbench/
 
